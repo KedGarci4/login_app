@@ -4,7 +4,7 @@ import 'package:login_app/components/meu_boton.dart';
 import 'package:login_app/components/meu_registro.dart';
 import 'package:login_app/components/meu_textfield.dart';
 import 'package:login_app/pages/principal.dart';
-import 'package:login_app/pages/registro.dart'; // Assuming this is HomeScreen
+import 'package:login_app/pages/registro.dart'; 
 
 class InicioSesion extends StatefulWidget {
   const InicioSesion({super.key});
@@ -87,11 +87,9 @@ class _InicioSesionState extends State<InicioSesion> {
                     ],
                   ),
                 ),
-
-                // Login Button
+                
                 const SizedBox(height: 25),
                 MeuBoton(onTap: iniciarSesion),
-                // Register Button
                 const SizedBox(height: 10),
                 MeuRegistro(
                   onTap: () {

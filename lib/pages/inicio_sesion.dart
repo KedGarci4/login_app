@@ -57,7 +57,7 @@ class _InicioSesionState extends State<InicioSesion> {
                   style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                 ),
 
-                // Username TextField
+                // Username 
                 const SizedBox(height: 25),
                 MeuTextField(
                   controller: _userController,
@@ -65,7 +65,7 @@ class _InicioSesionState extends State<InicioSesion> {
                   obscureText: false,
                 ),
 
-                // Password TextField
+                // Password 
                 const SizedBox(height: 15),
                 MeuTextField(
                   controller: _passwordController,
@@ -73,7 +73,7 @@ class _InicioSesionState extends State<InicioSesion> {
                   obscureText: true,
                 ),
 
-                // "Forgot Password?" Text
+                // "Olvidaste tu contraseña?" Texto
                 const SizedBox(height: 20),
                 const Padding(
                   padding:EdgeInsets.symmetric(horizontal: 25.0),

@@ -19,7 +19,22 @@ class _InicioSesionState extends State<InicioSesion> {
   final _passwordController = TextEditingController();
 
   void iniciarSesion() {
-    
+    final user = _userController.text;
+    final password = _passwordController.text;
+    if (_formKey.currentState!.validate()) {
+      if (user == "kedwin.guillen@unah.hn" && password == "20202000370") {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen(correoUsuario: user)),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Inicio de sesión incorrecto'),
+          ),
+        );
+      }
+    }
   }
   @override
   Widget build(BuildContext context) {
@@ -75,24 +90,7 @@ class _InicioSesionState extends State<InicioSesion> {
 
                 // Login Button
                 const SizedBox(height: 25),
-                MeuBoton(onTap: (){
-                  final user = _userController.text;
-                  final password = _passwordController.text;
-                  if (_formKey.currentState!.validate()) {
-                    if (user =="kedwin.guillen@unah.hn" && password == "20202000370") {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen(correoUsuario: user))
-                          );
-                            } else {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('Inicio de sesión incorrecto'),
-                                      ),
-                                    );
-                                  }
-                                }
-                }),
+                MeuBoton(onTap: iniciarSesion),
                 // Register Button
                 const SizedBox(height: 10),
                 MeuRegistro(
